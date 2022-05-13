@@ -12,6 +12,7 @@ const todo = mongoose.Schema({
   status: {
     type: String,
     required: true,
+    default: { status: "in-progress" },
   },
 });
 

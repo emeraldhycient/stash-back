@@ -11,13 +11,13 @@ router.get("/:status", (req, res) => {
   res.send("welcome to my stashbox test api ");
 });
 
-// add new to do
+// update  to do
 router.post("/id:", (req, res) => {
   res.send("welcome to my stashbox test api ");
 });
 
-//update todo
-router.get("/todos", (req, res) => {
+// add new to do
+router.post("/create", (req, res) => {
   res.send("welcome to my stashbox test api ");
 });
 
