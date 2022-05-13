@@ -1,4 +1,4 @@
-const todo = require("../../models/todo");
+const todo = require("../../models/todo/todo");
 
 const deleteTodo = (req, res) => {
   const { id } = req.params;

@@ -1,4 +1,4 @@
-const todo = require("../../models/todo");
+const todo = require("../../models/todo/todo");
 
 const addTodo = (req, res) => {
   const { title, description, status, category } = req.body;
