@@ -22,6 +22,8 @@ app.get("/api", (req, res) => {
   res.send("welcome to my stashbox test api ");
 });
 
+app.use("/api/todos", require("./routes/todo"));
+
 const port = process.env.PORT || 6969;
 app.listen(port, () => {
   console.log(`server is running on port ${port} darling`);
