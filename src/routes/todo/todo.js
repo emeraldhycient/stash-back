@@ -1,27 +1,18 @@
 const express = require("express");
 const router = express.Router();
+const todoController = require("../../controllers/todo/index");
 
 //list all todos
-router.get("/", (req, res) => {
-  res.send("welcome to my stashbox test api ");
-});
+router.get("/", todoController.alltodo);
 
 //list all todos by status
-router.get("/:status", (req, res) => {
-  res.send("welcome to my stashbox test api ");
-});
+router.get("/:status", todoController.listtodobystat);
 
 // update  to do
-router.post("/id:", (req, res) => {
-  res.send("welcome to my stashbox test api ");
-});
+router.post("/id:", todoController.updatetodo);
 
 // add new to do
-router.post("/create", (req, res) => {
-  res.send("welcome to my stashbox test api ");
-});
+router.post("/create", todoController.addtodo);
 
 //delete todo
-router.get("/:id", (req, res) => {
-  res.send("welcome to my stashbox test api ");
-});
+router.get("/:id", todoController.deletetodo);
