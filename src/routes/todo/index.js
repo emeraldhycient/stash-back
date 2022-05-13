@@ -9,10 +9,12 @@ router.get("/", todoController.alltodo);
 router.get("/:status", todoController.listtodobystat);
 
 // update  to do
-router.post("/id:", todoController.updatetodo);
+router.post("/:id", todoController.updatetodo);
 
 // add new to do
 router.post("/create", todoController.addtodo);
 
 //delete todo
 router.get("/:id", todoController.deletetodo);
+
+module.exports = router;

@@ -1,8 +1,8 @@
-const addtodo = require("../../controllers/todo/addtodo");
-const alltodo = require("../../controllers/todo/alltodo");
-const listtodobystat = require("../../controllers/todo/listbystat");
-const deletetodo = require("../../controllers/todo/delete");
-const updatetodo = require("../../controllers/todo/update");
+const addtodo = require("./addtodo");
+const alltodo = require("./alltodo");
+const listtodobystat = require("./listbystat");
+const deletetodo = require("./delete");
+const updatetodo = require("./updatetodo");
 
 module.exports = {
   addtodo,

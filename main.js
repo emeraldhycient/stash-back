@@ -6,6 +6,8 @@ const mongoose = require("mongoose");
 
 const app = express();
 
+const alltodoRoutes = require("./src/routes/todo");
+
 //connect to mongodb
 mongoose
   .connect(`${process.env.MongoDB}`, {
@@ -22,7 +24,7 @@ app.get("/api", (req, res) => {
   res.send("welcome to my stashbox test api ");
 });
 
-app.use("/api/todos", require("./src/routes/todo"));
+app.use("/api/todos", alltodoRoutes);
 
 const port = process.env.PORT || 6969;
 app.listen(port, () => {
