@@ -18,9 +18,9 @@ const updatetodo = (req, res) => {
         todo
           .save()
           .then(() => {
-            return res.json({
+            return res.status(200).json({
               status: "failed",
-              message: "pls enter all the fields",
+              message: "todo updated successfully",
               todos: todo,
             });
           })
