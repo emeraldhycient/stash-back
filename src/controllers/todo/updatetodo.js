@@ -2,9 +2,9 @@ const todo = require("../../models/todo/todo");
 
 const updatetodo = (req, res) => {
   const { id } = req.params;
-  const { title, description, status, category } = req.body;
+  const { title, description, status } = req.body;
 
-  if (!title || !description || !status || !category) {
+  if (!title || !description || !status) {
     return res
       .status(422)
       .json({ status: "failed", message: "pls enter all the fields" });
