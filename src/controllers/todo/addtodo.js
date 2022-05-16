@@ -4,7 +4,7 @@ const addTodo = (req, res) => {
   const { title, description, status } = req.body;
 
   if (!title || !description || !status) {
-    return res.status(422).json({ notfound: "pls enter all todos" });
+    return res.status(422).json({ message: "pls enter all todos" });
   } else {
     const newTodo = new todo({
       title: title,
