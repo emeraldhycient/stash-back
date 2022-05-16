@@ -4,7 +4,7 @@ const addTodo = (req, res) => {
   const { title, description, status } = req.body;
 
   if (!title || !description || !status) {
-    return res.status(404).json({ notfound: "No todos found" });
+    return res.status(404).json({ notfound: "pls enter all todos" });
   } else {
     const newTodo = new todo({
       title: title,
@@ -21,7 +21,7 @@ const addTodo = (req, res) => {
       .catch((err) => {
         res.status(422).json({
           status: "failed",
-          message: "pls enter all the fields",
+          message: "internal serve error",
           todo: {
             title: title,
             description: description,
