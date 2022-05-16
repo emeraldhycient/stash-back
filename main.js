@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get("/api", (req, res) => {
-  res.send("welcome to my stashbox test api ");
+  res.send("welcome to my stashbox  api ");
 });
 
 app.use("/api/todos", alltodoRoutes);
